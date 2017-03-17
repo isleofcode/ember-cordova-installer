@@ -1,0 +1,30 @@
+{
+  "name": "ember-cordova-installer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/isleofcode/ember-cordova-installer",
+  "description": "ember-cordova installer for plugins/platforms.",
+  "directories": {
+  },
+  "engines": {
+    "node": "^4.5 || 6.* || 7.*"
+  },
+  "author": {
+    "name": "Alex Blom",
+    "email": "alex@isleofcode.com",
+    "url": "https://isleofcode.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isleofcode/ember-cordova-installer.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ember-cordova"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "ember-cli-version-checker": "^1.2.0",
+    "lodash": "^4.17.4",
+    "rsvp": "^3.5.0"
+  }
+}
