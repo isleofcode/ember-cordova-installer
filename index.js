@@ -5,14 +5,25 @@ const chalk             = require('chalk');
 module.exports = {
   install: function(name, project) {
     let checker = new VersionChecker(project);
-    let dep = checker.for('ember-cordova', 'npm');
-    if (!dep.version) {
+    let emberCordova = checker.for('ember-cordova', 'npm');
+    let corber = checker.for('corber', 'npm');
+    let installCmd;
+
+    if (!emberCordova.version && !corber.version) {
       throw new Error(chalk.red(`ember-cordova plugin error:
-        Can not install ${name} as ember-cordova is not installed`
+        Can not install ${name} as corber || ember-cordova is not installed`
       ));
     }
 
-    return awaitCommand(`ember cdv:plugin add ${name}`).then(function() {
+    if (corber.version !== undefined) {
+      installCmd = 'corber plugin add';
+    }
+
+    if (emberCordova.version !== undefined) {
+      installCmd = 'ember cdv:plugin add';
+    }
+
+    return awaitCommand(`${installCmd} ${name}`).then(function() {
       console.log(chalk.green(`ember-cordova: Installed plugin ${name}`));
     });
   }
