@@ -1,6 +1,6 @@
 {
   "name": "ember-cordova-installer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/isleofcode/ember-cordova-installer",
   "description": "ember-cordova installer for plugins/platforms.",
   "directories": {
